@@ -1,1 +1,1 @@
-# pharmacy-front
+# Pharmacy app : Front side
