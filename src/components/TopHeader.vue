@@ -1,6 +1,10 @@
 <template>
 	<div class="header">
-		<font-awesome-icon icon="fa-solid fa-bars" />	
+		<Transition>
+			<div class="overlay" v-if="sideBarVisibility" @click="hideSideBar"></div>
+		</Transition>
+		<SideBar class="SideBar" :visibility="sideBarVisibility" />
+		<font-awesome-icon icon="fa-solid fa-bars" @click="displaySideBar" />	
 		<div class="brand">
 			<img src="@/assets/logo.svg" class="brand__image" />
 			<span class="brand__title">Pharmacie</span>
@@ -13,12 +17,50 @@
 </template>
 
 <script>
+	import SideBar from './SideBar.vue'
+
 	export default {
 		name: 'TopHeader',
+		components: {
+			SideBar,
+		},
+		data() {
+			return {
+				sideBarVisibility: false,
+			}
+		},
+		methods: {
+			displaySideBar() {
+				this.sideBarVisibility = true
+			},
+			hideSideBar() {
+				this.sideBarVisibility = false
+			}
+		}
 	}
 </script>
 
 <style scoped>
+	.v-enter-active,
+	.v-leave-active {
+		transition: opacity 0.5s ease;
+	}
+	.v-enter-from,
+	.v-leave-to {
+		opacity: 0;
+	}
+	.overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, .75);
+		z-index: 9;
+	}
+	.SideBar {
+		padding-top: 32px;
+	}
 	.header {
 		display: flex;
 		flex-direction: row;

@@ -31,14 +31,6 @@
 			</div>
 			<font-awesome-icon icon="fa-solid fa-chevron-right" class="chevron" />
 		</div>
-		<div class="divider"></div>
-		<div class="option">
-			<div class="option__title">
-				<font-awesome-icon icon="fa-regular fa-calendar" />
-				<span class="option__title-text">Appointments</span>
-			</div>
-			<font-awesome-icon icon="fa-solid fa-chevron-right" class="chevron" />
-		</div>
 	</div>
 </template>
 
@@ -56,6 +48,7 @@
 		display: flex;
 		flex-direction: column;
 		background-color: #FFF;
+		border-radius: 18px;
 		padding: 16px 0;
 	}
 	.option {
