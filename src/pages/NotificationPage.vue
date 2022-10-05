@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<TopHeader class="TopHeader" />
+		<TopHeader class="TopHeader" needBack="true" />
 		<NotificationItem v-for="(notification, key) in notifications" :key="key" class="NotificationItem"
 			:title="notification.title"
 			:content="notification.content"

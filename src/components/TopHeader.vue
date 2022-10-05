@@ -4,7 +4,8 @@
 			<div class="overlay" v-if="sideBarVisibility" @click="hideSideBar"></div>
 		</Transition>
 		<SideBar class="SideBar" :visibility="sideBarVisibility" />
-		<font-awesome-icon icon="fa-solid fa-bars" @click="displaySideBar" />	
+		<font-awesome-icon icon="fa-solid fa-bars" @click="displaySideBar" v-show="!needBack"/>	
+		<font-awesome-icon icon="fa-solid fa-arrow-left" @click="goBack" v-show="needBack"/>	
 		<div class="brand">
 			<img src="@/assets/logo.svg" class="brand__image" />
 			<span class="brand__title">Pharmacie</span>
@@ -24,6 +25,12 @@
 		components: {
 			SideBar,
 		},
+		props: {
+			needBack: {
+				type: Boolean,
+				default: false,
+			},
+		},
 		data() {
 			return {
 				sideBarVisibility: false,
@@ -39,6 +46,9 @@
 			hideSideBar() {
 				this.sideBarVisibility = false
 			},
+			goBack() {
+				this.$router.back()
+			}
 		}
 	}
 </script>
