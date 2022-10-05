@@ -9,8 +9,8 @@
 			<img src="@/assets/logo.svg" class="brand__image" />
 			<span class="brand__title">Pharmacie</span>
 		</div>
-		<div class="notification">
-			<font-awesome-icon icon="fa-regular fa-bell" />
+		<div class="notification" @click="showNotifications">
+			<font-awesome-icon icon="fa-regular fa-bell"/>
 			<span class="notification__count"></span>
 		</div>
 	</div>
@@ -33,9 +33,12 @@
 			displaySideBar() {
 				this.sideBarVisibility = true
 			},
+			showNotifications() {
+				this.$router.push('/notifications')
+			},
 			hideSideBar() {
 				this.sideBarVisibility = false
-			}
+			},
 		}
 	}
 </script>
@@ -87,6 +90,7 @@
 	}
 	.notification {
 		position: relative;
+		cursor: pointer;
 	}
 	.notification__count {
 		display: flex;
