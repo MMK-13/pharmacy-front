@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import SplashScreen from './pages/SplashScreen.vue'
-import StartingPage from './pages/StartingPage.vue'
-import RegisterPage from './pages/RegisterPage.vue'
-import ConfimationPhone from './pages/ConfimationPhone.vue'
-import HomePage from './pages/HomePage.vue'
-import AccountPage from './pages/AccountPage.vue'
-import SearchResult from './pages/SearchResult.vue'
-
+import SplashScreen from './pages/SplashScreen'
+import StartingPage from './pages/StartingPage'
+import RegisterPage from './pages/RegisterPage'
+import ConfimationPhone from './pages/ConfimationPhone'
+import HomePage from './pages/HomePage'
+import AccountPage from './pages/AccountPage'
+import SearchResult from './pages/SearchResult'
+import NotificationPage from './pages/NotificationPage'
 
 const router = createRouter({
 	history: createWebHistory(),
@@ -19,6 +19,7 @@ const router = createRouter({
 		{path: '/home', name: 'home', component: HomePage},
 		{path: '/account', name: 'account', component: AccountPage},
 		{path: '/search/:drug', name: 'search', component: SearchResult},
+		{path: '/notifications', name: 'notifications', component: NotificationPage},
 	]
 })
 export default router
