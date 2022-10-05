@@ -27,7 +27,6 @@
 		},
 		props: {
 			needBack: {
-				type: Boolean,
 				default: false,
 			},
 		},
