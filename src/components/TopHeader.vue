@@ -1,6 +1,6 @@
 <template>
 	<div class="header">
-		<Transition>
+		<Transition name="overlay">
 			<div class="overlay" v-if="sideBarVisibility" @click="hideSideBar"></div>
 		</Transition>
 		<SideBar class="SideBar" :visibility="sideBarVisibility" />
@@ -41,12 +41,12 @@
 </script>
 
 <style scoped>
-	.v-enter-active,
-	.v-leave-active {
+	.overlay-enter-active,
+	.overlay-leave-active {
 		transition: opacity 0.5s ease;
 	}
-	.v-enter-from,
-	.v-leave-to {
+	.overlay-enter-from,
+	.overlay-leave-to {
 		opacity: 0;
 	}
 	.overlay {
