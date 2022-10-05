@@ -4,7 +4,7 @@
 			<label for="search" class="search__label">
 				<font-awesome-icon icon="fa-solid fa-magnifying-glass" />
 			</label>
-			<input id="search" type="search" class="search__input" placeholder="Search for pharmacy..." v-model="typing" />
+			<input id="search" type="search" class="search__input" placeholder="Search for pharmacy..." @keyup="setTyping" />
 		</div>
 		<div class="search__result" v-show="showResult">
 			<div class="search__result-item" v-for="(result, index) in results" :key="index" @click="setSearch(result)">{{ result.name }}</div>
@@ -43,6 +43,9 @@
 				if (!drug.error)
 					this.$router.push('/search/' + drug.name)
 			},
+			setTyping() {
+				this.typing = document.querySelector('.search__input').value
+			}
 		},
 		computed: {
 			results() {
