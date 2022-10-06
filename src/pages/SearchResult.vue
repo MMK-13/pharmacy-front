@@ -58,7 +58,7 @@
 	}
 	.title {
 		margin: 0;
-		font-size: 18px;
+		font-size: 16px;
 		font-weight: 700;
 		color: #0A0A0A;
 		margin-bottom: 16px;
