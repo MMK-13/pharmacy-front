@@ -1,24 +1,21 @@
 <template>
 	<div class="container">
-		<TopHeader class="TopHeader" />
+		<TopHeader class="TopHeader" needBack="true" />
 		<UserInfo class="UserInfo" :fullname="user.fullname" :phone="user.phone" />
 		<UserFavButton class="UserFavButton" />
 		<UserOption />
-		<BottomMenu />
 	</div>
 </template>
 
 <script>
-	import BottomMenu from '@/components/BottomMenu.vue'
-	import TopHeader from '@/components/TopHeader.vue'
-	import UserInfo from '@/components/UserInfo.vue'
-	import UserFavButton from '@/components/UserFavButton.vue'
-	import UserOption from '@/components/UserOption.vue'
+	import TopHeader from '@/components/TopHeader'
+	import UserInfo from '@/components/UserInfo'
+	import UserFavButton from '@/components/UserFavButton'
+	import UserOption from '@/components/UserOption'
 
 	export default {
 		name: 'AccountPage',
 		components: {
-			BottomMenu,
 			TopHeader,
 			UserInfo,
 			UserFavButton,
