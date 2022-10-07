@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage'
 import AccountPage from './pages/AccountPage'
 import SearchResult from './pages/SearchResult'
 import NotificationPage from './pages/NotificationPage'
+import MapsPage from './pages/MapsPage'
 
 const router = createRouter({
 	history: createWebHistory(),
@@ -20,6 +21,7 @@ const router = createRouter({
 		{path: '/account', name: 'account', component: AccountPage},
 		{path: '/search/:drug', name: 'search', component: SearchResult},
 		{path: '/notifications', name: 'notifications', component: NotificationPage},
+		{path: '/maps', name: 'maps', component: MapsPage},
 	]
 })
 export default router
