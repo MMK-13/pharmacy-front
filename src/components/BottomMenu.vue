@@ -3,25 +3,19 @@
 		<router-link :to="{name: 'home'}">
 			<div class="menu__action">
 				<font-awesome-icon icon="fa-solid fa-capsules" />
-				<span class="menu__action-text">Pharmacies</span>
+				<span class="menu__action-text">Accueil</span>
 			</div>
 		</router-link>
-		<router-link :to="{name: 'home'}">
+		<router-link :to="{name: 'maps'}">
 			<div class="menu__action">
-				<font-awesome-icon icon="fa-solid fa-clock-rotate-left" />
-				<span class="menu__action-text">History</span>
-			</div>
-		</router-link>
-		<router-link :to="{name: 'home'}">
-			<div class="menu__action">
-				<font-awesome-icon icon="fa-regular fa-comment" />
-				<span class="menu__action-text">Chat</span>
+				<font-awesome-icon icon="fa-regular fa-map" />
+				<span class="menu__action-text">Carte</span>
 			</div>
 		</router-link>
 		<router-link :to="{name: 'account'}">
 			<div class="menu__action">
 				<font-awesome-icon icon="fa-regular fa-user" />
-				<span class="menu__action-text">Account</span>
+				<span class="menu__action-text">Profil</span>
 			</div>
 		</router-link>
 	</div>
